@@ -13,10 +13,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-overflow-scrolling: touch;
   -webkit-font-smoothing: antialiased;
-
-  &.active {
-    overflow: hidden;
-  }
 }
 
 * {
@@ -38,12 +34,6 @@ h1 {
 p {
   margin-top: 0;
   margin-bottom: $grid;
-}
-
-a {
-  color: white;
-  border-bottom: 1px solid white;
-  text-decoration: none;
 }
 
 ul {
@@ -123,6 +113,8 @@ ul {
   display: flex;
   flex-wrap: wrap;
 
+  margin-bottom: $grid*8;
+
   .festival-description {
     width: 100%;
     margin-bottom: $grid*4;
@@ -143,12 +135,79 @@ ul {
     }
 
     > div {
-      margin-bottom: $grid;
+      margin-bottom: $grid*4;
     }
 
     .subscribe {
       @include respond-to(medium) {
         width: 50%;
+      }
+
+      p {
+        margin-bottom: $grid/2;
+      }
+
+      form {
+        background: transparent;
+      }
+
+      input {
+        background: transparent;
+        outline: none;
+        border-radius: 0;
+        border: 0;
+        border: 1px solid white;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        color: white;
+        font-family: 'Caslon 540 BT';
+        font-size: 1em;
+        padding: 4px 10px;
+        margin-bottom: $grid/2;
+
+        &::-webkit-input-placeholder,
+        &:-moz-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder {
+          color: white;
+        }
+
+        &:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+          color: white;
+          background: transparent;
+        }
+      }
+
+      input[type="email"] {
+        width: 100%;
+      }
+
+      input[type="submit"] {
+        color: white;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background: white;
+        color: $color-main;
+      }
+    }
+
+    .partners {
+      a {
+        display: inline-block;
+        vertical-align: middle;
+        width: 70px;
+        margin-right: $grid;
+
+        @include respond-to(small) {
+          width: 80px;
+        }
+      }
+
+      img {
+        width: 100%;
       }
     }
   }
@@ -181,6 +240,12 @@ ul {
 
       > div {
         margin-bottom: $grid;
+      }
+
+      a {
+        color: white;
+        border-bottom: 1px solid white;
+        text-decoration: none;
       }
 
       .venue-date {
