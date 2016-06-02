@@ -1,0 +1,31 @@
+body {
+  background: black;
+  color: white;
+  padding: 0px; margin: 0px;
+  // font-family: $font-family-basic;
+  text-rendering: optimizeLegibility;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  margin: 0; padding: 0;
+}
+
+// * {
+//   box-sizing: border-box;
+// }
+
+// a {
+//   text-decoration: none;
+//   color: $color-main;
+// }
+
+// ul {
+//   list-style: none;
+//   list-style-image: none;
+//   margin: 0;
+//   padding: 0;
+// }
+
+.fullScreen {
+  height: 100%;
+}

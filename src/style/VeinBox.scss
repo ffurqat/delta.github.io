@@ -1,0 +1,193 @@
+@import "variables";
+@import "mixins";
+
+body {
+  background: #000;
+  color: white;
+  font-family: 'Caslon 540 BT';
+  font-style:   normal;
+  font-weight:  400;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+
+  &.active {
+    overflow: hidden;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: $grid;
+
+  @include respond-to(large) {
+    font-size: 1.4em;
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: $grid;
+}
+
+a {
+  color: white;
+  border-bottom: 1px solid white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+.full-screen {
+  position: fixed;
+  left: 0; top: 0;
+
+  width: 100vw; height: 100vh;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: $grid;
+}
+
+.intro {
+  position: relative;
+  height: 100vh;
+
+  .dates {
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 1.2em;
+    line-height: 1;
+
+    @include respond-to(large) {
+      position: absolute;
+      top: 0; right: 0;
+      width: 50%;
+      text-align: center;
+      font-size: 1.4em;
+    }
+
+    div {
+      @include respond-to(small) {
+        width: 50%;
+      }
+
+      &:nth-child(2) {
+        display: none;
+
+        @include respond-to(small) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  h1 {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .festival-description {
+    display: none;
+
+    @include respond-to(large) {
+      display: block;
+
+      position: absolute;
+      top: 0; left: 0;
+      width: 25%;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+
+  .festival-description {
+    width: 100%;
+    margin-bottom: $grid*4;
+    order: 1;
+
+    @include respond-to(large) {
+      display: none;
+    }
+  }
+
+  .sidebar {
+    width: 100%;
+    order: 3;
+
+    @include respond-to(medium) {
+      order: 2;
+      width: 50%;
+    }
+
+    > div {
+      margin-bottom: $grid;
+    }
+
+    .subscribe {
+      @include respond-to(medium) {
+        width: 50%;
+      }
+    }
+  }
+
+  .events {
+    width: 100%;
+    order: 2;
+
+    font-size: 1.2em;
+
+    @include respond-to(medium) {
+      order: 3;
+      width: 50%;
+    }
+
+    @include respond-to(large) {
+      font-size: 1.4em;
+    }
+
+    > p {
+      margin-bottom: $grid*2;
+    }
+
+    .event {
+      border-bottom: 1px solid white;
+      padding-bottom: $grid;
+      margin-bottom: $grid*2;
+
+      &:last-child { border: 0; }
+
+      > div {
+        margin-bottom: $grid;
+      }
+
+      .venue-date {
+        @include respond-to(large) {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

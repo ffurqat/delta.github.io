@@ -1,0 +1,24 @@
+$grid: 20px;
+$color-accent: #41B6E6;
+$color-main: #111;
+$baseTransitionStyle: cubic-bezier(0.660, 0.000, 0.070, 1.000);
+
+$sizeXXL:       1500px;
+$sizeXL:        1100px;
+$sizeL:         1024px;
+$sizeM:         768px;
+$sizeS:         320px;
+
+@font-face {
+  font-family: 'Caslon 540 BT';
+  src: url('/fonts/CSL55.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/CSL55.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/CSL55.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/CSL55.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/CSL55.svg#4939673e16c38094b4bbcaf912068c19') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+
