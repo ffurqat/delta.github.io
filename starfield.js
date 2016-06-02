@@ -146,7 +146,7 @@ StarField.prototype._renderStarField = function() {
         this.canvas.fillRect(
             star.x + this.width / 2,
             star.y + this.height / 2,
-            1, 1);
+            2, 2);
     }
 };
 
