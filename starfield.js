@@ -262,4 +262,4 @@ StarField.prototype.render = function(numStars, maxStarSpeed) {
 }());
 
 // Kick off!
-var starField = new StarField('full-screen').render(133, 1);
+var starField = new StarField('full-screen').render(133, 3);
