@@ -257,11 +257,8 @@ ul {
     }
 
     .event {
-      border-bottom: 1px solid white;
       padding-bottom: $grid;
       margin-bottom: $grid*2;
-
-      &:last-child { border: 0; }
 
       > div {
         margin-bottom: $grid;
